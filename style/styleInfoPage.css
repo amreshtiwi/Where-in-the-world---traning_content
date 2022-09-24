@@ -1,0 +1,169 @@
+*{
+    font-size: 16px;
+}
+.home-info{
+    padding-top: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50%; 
+     height: 100px;
+}
+
+.back-input{
+    width: 30%;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px -3px #858585;
+    display: flex;
+    justify-content: center;
+}
+
+.back{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    /* align-content: space-around; */
+    /* gap: 50%; */
+    /* height: 100px; */
+}
+
+.flag{
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    height: 450px;
+}
+
+.basic-info > div{
+    padding: 5px;
+}
+
+.country-name{
+    width: 100%;
+    font-size: 20px;
+}
+.basic-info2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.border-title{
+    width: 100%;
+}
+
+.border-countries{
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 #858585;
+    text-align: center;
+    font-size: 12px;
+    width: 28%;
+}
+
+@media only screen and (min-width: 650px) {
+    
+    .home-info{
+        padding-top: 17%;
+    }
+    .basic-info2{
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 1%
+    }
+
+    .border-title{
+        width: auto;
+    }
+
+    .border-countries{
+        text-align: center;
+        font-size: 12px;
+        width: 12%;
+        height: 45%;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1200px){
+
+    .home-info{
+        padding-top: 10%;
+        padding-right: 0;
+    }
+
+    .back-input{
+        width: 8%;
+        padding: 7px;
+    }
+    .info-section{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flag{
+        /* width: 40%; */
+        /* height: 500px; */
+
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .info{
+        width: 50%;
+        height: 100px;
+        gap: 20%;
+    }
+
+    .country-name{
+        width: 100%;
+        /* height: auto; */
+        margin: 0;
+    }
+
+    .basic-info2{
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 1%;
+    }
+
+    .border-title{
+        width: auto;
+    }
+
+    .border-countries{
+        text-align: center;
+        font-size: 12px;
+        width: 12%;
+        height: 45%;
+    }
+
+}
+
+
+
+
+
+
+
