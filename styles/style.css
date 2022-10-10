@@ -1,3 +1,21 @@
-*{
+/* *{
     font-family: 'Nunito Sans', sans-serif !important;
+} */
+.normal-mode-background{
+    background-color: #fafafa;
 }
+.normal-mode-elements{
+    background-color: #ffffff;
+    color: black;
+}
+.dark-mode-background{
+    background-color: #202c37 !important;
+    color: white !important;
+}
+
+.dark-mode-elements{
+    background-color: #2b3945 !important;
+    color: white !important;
+}
+
+
