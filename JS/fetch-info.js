@@ -40,7 +40,7 @@ async function fetchCountryInfo(){
                     <div class="row justify-content-between">
                         <div class="my-3 col-lg-6">
                             <p class="my-2"><strong class="fw-semibold">Native Name:</strong> ${Object.values(countries[0].name.nativeName)[0].common}</p>
-                            <p class="my-2"><strong class="fw-semibold">Population:</strong> ${countries[0].population}</p>
+                            <p class="my-2"><strong class="fw-semibold">Population:</strong> ${countries[0].population.toLocaleString()}</p>
                             <p class="my-2"><strong class="fw-semibold">Region:</strong> ${countries[0].region}</p>
                             <p class="my-2"><strong class="fw-semibold">Sub Region:</strong> ${countries[0].subregion}</p>
                             <p class="my-2"><strong class="fw-semibold">Capital:</strong> ${countries[0].capital}</p>
@@ -83,11 +83,11 @@ async function fetchCountryInfo(){
                             console.error('Could not fetch verse:', error)
                         });
                         console.log(borderCountry);
-                        borderBtn =`<button class="${darkModeElement} rounded border-0 shadow  px-lg-4 py-lg-1 px-3 py-0 text-nowrap  col-lg-3" name="element" onclick="location.href='info.html?name=${borderCountry[0].name.common}'">${borderCountry[0].name.common}</button>`;
+                        borderBtn =`<button class="${darkModeElement} rounded border-0 shadow  px-lg-4 py-lg-1 px-3 py-0  col-lg-3" name="element" onclick="location.href='info.html?name=${borderCountry[0].name.common}'">${borderCountry[0].name.common}</button>`;
                         document.getElementsByClassName("borderBtns")[0].innerHTML += borderBtn;
                     });
                 } else {
-                    borderBtn = `<button class="${darkModeElement} rounded border-0 shadow  px-lg-4 py-lg-1 px-3 py-0 text-nowrap  col-lg-3" name="element" > No borders </button>`;
+                    borderBtn = `<button class="${darkModeElement} rounded border-0 shadow  px-lg-4 py-lg-1 px-3 py-0   col-lg-3" name="element" > No borders </button>`;
                     document.getElementsByClassName("borderBtns")[0].innerHTML += borderBtn;
                 }
         

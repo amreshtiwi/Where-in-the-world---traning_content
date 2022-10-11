@@ -9,7 +9,7 @@
     color: black;
 }
 .dark-mode-background{
-    background-color: #202c37 !important;
+    background: #202c37 !important;
     color: white !important;
 }
 
@@ -19,3 +19,20 @@
 }
 
 
+
+
+
+.options a{
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.options a:hover {
+    background-color: #ddd;
+}
+
+.dark-mode-background a:hover {
+    background-color: #202c37 !important;
+}

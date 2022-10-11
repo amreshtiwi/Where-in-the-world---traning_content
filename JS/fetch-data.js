@@ -9,6 +9,8 @@ async function render(){
     await fetchCounteries(url);
 }
 
+
+
 async function searchCountries(){
     let searchInputValue = document.getElementById("search").value;
 
@@ -45,7 +47,7 @@ async function fetchCounteries(url){
     
     
     if(countries !== undefined &&  NoReseultFlag){
-        if(filterInputValue === 'filter'){
+        if(filterInputValue === 'Filter by Region'){
             NoFilterFlag = true;
         }else{
             NoFilterFlag = false;
@@ -53,13 +55,13 @@ async function fetchCounteries(url){
         countries.forEach(element => {
             if(NoFilterFlag || (element.region === filterInputValue)){
                 countriesInHTML += `            
-                <a href="./info.html?name=${element.name.common}" class="btn text-start p-0 m-0" style="width: calc( 25% - 50px); min-width: 250px;  border-radius: 5px;">
+                <a href="./info.html?name=${element.name.common}" class="btn text-start p-0 m-0" style="width: calc( 25% - 40px); min-width: 250px;  max-height:400px; border-radius: 5px;">
                     <div class="card shadow border-0 w-100 h-100" >
                         <img src="${element.flags.svg}" class="w-100 h-50" alt="${element.name.common}" style="object-fit: cover; border-radius: 5px 5px 0px 0px;">
                         <div class="${darkModeElement} card-body px-4" style="border-radius: 0px 0px 5px 5px;" name="element">
                             <h5 class="${darkModeElement} card-title mb-3 mt-2 fw-bold"  name="element">${element.name.common}</h5>
                             <div class="card-text mb-4">
-                                <div class="info"><strong class="fw-semibold">Population:</strong> ${element.population}</div>
+                                <div class="info"><strong class="fw-semibold">Population:</strong> ${element.population.toLocaleString()}</div>
                                 <div class="info"><strong class="fw-semibold">Region:</strong> ${element.region}</div>
                                 <div class="info"><strong class="fw-semibold">Capital:</strong> ${element.capital}</div>
                             </div>

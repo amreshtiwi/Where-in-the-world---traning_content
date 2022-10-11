@@ -4,8 +4,12 @@ function darkMode(){
     dark_mode_elemnt.forEach(element => {
         element.classList.toggle("dark-mode-elements");
     });
+
+
 }
 
 function darkModeValue(){
     localStorage.setItem('darkMode', JSON.stringify(!JSON.parse(localStorage.getItem('darkMode'))));
 }
+
+// searchIcon
