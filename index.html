@@ -10,11 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/db8dcd36d1.js" crossorigin="anonymous"></script>
     <script src="JS\dark-mode.js"></script>
-    <script src="JS\fetch-data.js"></script>
+    <!-- <script src="JS\fetch-data.js"></script> -->
     <script src="JS\filter.js"></script>
+    <script src="JS\fetchCountry.js"></script>
+    <script src="JS\initIndex.js"></script>
+    <script src="JS\commonHTML.js" ></script>
     <title>Where in the world?</title>
 </head>
-<body class="container-fluid m-0 p-0 normal-mode-background" id="body" onload="render()">
+<body class="container-fluid m-0 p-0 normal-mode-background" id="body" onload="init()">
     <!-- header -->
     <header name="element" id="header" class="normal-mode-elements top-0 start-0 container-fluid d-flex align-items-center justify-content-between shadow-sm px-3 py-4 px-lg-5">
         <h1 class="fs-5 fw-bold mx-lg-4 mb-0">Where in the world?</h1>
@@ -31,8 +34,9 @@
             <!-- search input -->
             <div  class="col-lg-4 px-0 d-flex align-items-center shadow rounded mb-5 mb-lg-0 ">
                 <label id="searchIcon"  class="position-absolute ms-3  text-secondary" for="search"><i class="fa-solid fa-magnifying-glass "></i></label>
-                <input oninput="searchCountries()" type="text" class="form-control form-control-lg fs-6 border-0 py-3 px-5 " name="element" id="search" placeholder="Search for a country...">
+                <input  type="text" class="form-control form-control-lg fs-6 border-0 py-3 px-5 " name="element" id="search" placeholder="Search for a country...">
             </div>
+            <!-- oninput="searchCountries()" -->
 
             <!-- search filter -->
             <div  class="col-7 col-lg-2 px-0 shadow rounded fs-6 position-relative custom-select inline-block">
