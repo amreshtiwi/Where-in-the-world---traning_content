@@ -36,3 +36,33 @@
 .dark-mode-background a:hover {
     background-color: #202c37 !important;
 }
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #b3b3b3;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #858585;
+}
+
+
+
+

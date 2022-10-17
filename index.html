@@ -17,7 +17,7 @@
     <script src="JS\commonHTML.js" ></script>
     <title>Where in the world?</title>
 </head>
-<body class="container-fluid m-0 p-0 normal-mode-background" id="body" onload="init()">
+<body class="container-fluid m-0 p-0 normal-mode-background overflow-hidden" id="body" onload="init()">
     <!-- header -->
     <header name="element" id="header" class="normal-mode-elements top-0 start-0 container-fluid d-flex align-items-center justify-content-between shadow-sm px-3 py-4 px-lg-5">
         <h1 class="fs-5 fw-bold mx-lg-4 mb-0">Where in the world?</h1>
@@ -28,7 +28,7 @@
     </header>
 
 <!-- main -->
-    <div class="container-fluid py-4 py-lg-5 px-3 px-lg-5 ">
+    <div class="container-fluid pt-4 pt-lg-5 px-3 px-lg-5 ">
         <!-- serch section -->
         <div class="row justify-content-between mx-0 mx-lg-4">
             <!-- search input -->
@@ -40,22 +40,36 @@
 
             <!-- search filter -->
             <div  class="col-7 col-lg-2 px-0 shadow rounded fs-6 position-relative custom-select inline-block">
-                <input type="button" value="Filter by Region" onclick="getFilterValues()" name="element" id="select" class="normal-mode-elements border-0 w-100 h-100 rounded py-3 pe-5">
+                <input type="button" value="Filter by" onclick="getFilterValues()" name="element" id="select" class="normal-mode-elements border-0 w-100 h-100 rounded py-3 pe-5">
                 <span class="d-block position-absolute top-0 end-0 w-0 h-100" style="pointer-events:none ;"><i class="fa-solid fa-angle-down pt-4 pe-4"></i></span>
                 <div name="element" id="options" class="options normal-mode-elements position-absolute w-100 rounded mt-1 d-none"  style="z-index: 1;">
-                    <a name="dark-ref" id="noFilter" onclick="setFilterValue('Filter by Region')">Filter by Region</a>
+                    <a name="dark-ref" id="noFilter" onclick="setFilterValue('Filter by')">Filter by</a>
                     <a name="dark-ref" id="Africa" onclick="setFilterValue('Africa')">Africa</a>
                     <a name="dark-ref" id="Americas" onclick="setFilterValue('Americas')">Americas</a>
                     <a name="dark-ref" id="Asia" onclick="setFilterValue('Asia')">Asia</a>
                     <a name="dark-ref" id="Europe" onclick="setFilterValue('Europe')">Europe</a>
                     <a name="dark-ref" id="Oceania" onclick="setFilterValue('Oceania')">Oceania</a>
+                    <a name="dark-ref" id="Oceania" onclick="setFilterValue('Favourites')">Favourites</a>
                 </div>
             </div>
         </div>
 
-        <!-- card section -->
-        <div class="container-fluid py-5  pe-lg-5 ps-lg-0 d-flex justify-content-around justify-content-lg-between gap-5 flex-wrap mx-lg-4" id="card-section">
-            
+        <div class=" pt-xl-0 mt-lg-4 d-lg-flex ">
+
+            <!-- Favourites section -->
+            <div class="normal-mode-elements d-none d-lg-block rounded shadow-sm mt-5 me-0 ms-4 flex-shrink-0 pt-4 px-4 favourites-section" style="width: 20rem; height: 62vh ;" name="element" id="fav-section"
+                ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dropEnd(event)">
+
+                <h5 class="fw-bold">Favourites</h5>
+
+                <div class="d-block overflow-auto" style="width: 100%; height: 50vh;" id="fav-list" ></div>
+            </div>
+
+            <!-- card section -->
+            <div class="container-fluid mt-5 ps-lg-0  pe-lg-2  d-flex justify-content-around  justify-content-lg-end gap-5 flex-wrap mx-lg-2 overflow-auto" 
+            style="width: 100% ; height:62vh;" id="card-section">
+                
+            </div>
         </div>
 
     </div>
@@ -64,16 +78,7 @@
 </body>
 </html>
 
-                <!-- <select name="element" class="form-select border-0 py-3 px-4 fs-6"  aria-label="Default select example" id="select" onchange="searchCountries()">
-                    <option selected value="filter">Filter by Region</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Americas">America</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
-                <span class="rounded position-absolute top-0 end-0  d-block h-100 custom-arrow normal-mode-elements" style="width: 4rem; pointer-events: none;" name="element"> 
-                    <i class="fa-solid fa-angle-down"></i>
-                </span> -->
-
-                <!-- <i class="fa-solid fa-angle-down ms-5"></i> -->
+<!-- 
+    ondragenter="allowDrop(event)"
+                ondragleave="dropEnd(event)"
+ -->
