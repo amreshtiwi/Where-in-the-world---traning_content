@@ -6,6 +6,7 @@ async function init(){
     
     allCountries = await fetchCounteries(); //return all counteries from API
     favourites = JSON.parse(window.localStorage.getItem('favourites')); //return all fav from local storage
+    favourites = favourites ? favourites : [];
     let filteredCountries = filterCountries(allCountries);
     let HTML = createHTML(filteredCountries);
     render(HTML,"card-section");
